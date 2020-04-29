@@ -31,14 +31,14 @@ class APIController {
         task.resume()
     }
     
+    
+    // TODO: Need to add to this function parameters withParameters with type [string: string]
     func loadJobs(withCompletion completion: @escaping ([Item]?) -> Void) {
         let parameters = ["v":"true", "q": "ios"]
         let url = StackoverflowJobsFeedAPI.jobsFeedURL.appendingParameters(parameters)
         load(url: url, withCompletion: { (data) in
             if let data = data {
                 let items = MyXMLParser(with: data)
-//                print("items from XMLParser:\(items)")
-                
                 completion(items.returnItems())
             } else {
                 print("no data")

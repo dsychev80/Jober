@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		CF363BDD2451D3C000D00CAB /* JobsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF363BDC2451D3C000D00CAB /* JobsDataSource.swift */; };
 		CF363BDF245552B200D00CAB /* JobWebPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF363BDE245552B200D00CAB /* JobWebPageViewController.swift */; };
+		CF363BE32458BB8C00D00CAB /* UIViewController+LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF363BE22458BB8C00D00CAB /* UIViewController+LoadingIndicator.swift */; };
 		CF5CA1D4243DE26A00117DD4 /* MyXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5CA1D3243DE26A00117DD4 /* MyXMLParser.swift */; };
 		CF5CA1D6243E0E1000117DD4 /* stackoverflowJobsFeed.xml in Resources */ = {isa = PBXBuildFile; fileRef = CF5CA1D5243E0E1000117DD4 /* stackoverflowJobsFeed.xml */; };
 		CF74577C242BCD2300E56410 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF74577B242BCD2300E56410 /* AppDelegate.swift */; };
 		CF74577E242BCD2300E56410 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF74577D242BCD2300E56410 /* SceneDelegate.swift */; };
-		CF745780242BCD2300E56410 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF74577F242BCD2300E56410 /* ViewController.swift */; };
+		CF745780242BCD2300E56410 /* JobListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF74577F242BCD2300E56410 /* JobListViewController.swift */; };
 		CF745783242BCD2300E56410 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF745781242BCD2300E56410 /* Main.storyboard */; };
 		CF745785242BCD2600E56410 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF745784242BCD2600E56410 /* Assets.xcassets */; };
 		CF745788242BCD2600E56410 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF745786242BCD2600E56410 /* LaunchScreen.storyboard */; };
@@ -26,12 +27,13 @@
 /* Begin PBXFileReference section */
 		CF363BDC2451D3C000D00CAB /* JobsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsDataSource.swift; sourceTree = "<group>"; };
 		CF363BDE245552B200D00CAB /* JobWebPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobWebPageViewController.swift; sourceTree = "<group>"; };
+		CF363BE22458BB8C00D00CAB /* UIViewController+LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+LoadingIndicator.swift"; sourceTree = "<group>"; };
 		CF5CA1D3243DE26A00117DD4 /* MyXMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyXMLParser.swift; sourceTree = "<group>"; };
 		CF5CA1D5243E0E1000117DD4 /* stackoverflowJobsFeed.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = stackoverflowJobsFeed.xml; sourceTree = "<group>"; };
 		CF745778242BCD2300E56410 /* Jober.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jober.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF74577B242BCD2300E56410 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF74577D242BCD2300E56410 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CF74577F242BCD2300E56410 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CF74577F242BCD2300E56410 /* JobListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewController.swift; sourceTree = "<group>"; };
 		CF745782242BCD2300E56410 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF745784242BCD2600E56410 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF745787242BCD2600E56410 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,7 +79,7 @@
 				CF74578F242BEE8700E56410 /* Networking */,
 				CF74577B242BCD2300E56410 /* AppDelegate.swift */,
 				CF74577D242BCD2300E56410 /* SceneDelegate.swift */,
-				CF74577F242BCD2300E56410 /* ViewController.swift */,
+				CF74577F242BCD2300E56410 /* JobListViewController.swift */,
 				CF363BDC2451D3C000D00CAB /* JobsDataSource.swift */,
 				CF363BDE245552B200D00CAB /* JobWebPageViewController.swift */,
 				CF745781242BCD2300E56410 /* Main.storyboard */,
@@ -85,6 +87,7 @@
 				CF745786242BCD2600E56410 /* LaunchScreen.storyboard */,
 				CF745789242BCD2600E56410 /* Info.plist */,
 				CF8A997224518D8E00EF5A93 /* String+withoutHTMLTags.swift */,
+				CF363BE22458BB8C00D00CAB /* UIViewController+LoadingIndicator.swift */,
 			);
 			path = Jober;
 			sourceTree = "<group>";
@@ -195,7 +198,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF745780242BCD2300E56410 /* ViewController.swift in Sources */,
+				CF363BE32458BB8C00D00CAB /* UIViewController+LoadingIndicator.swift in Sources */,
+				CF745780242BCD2300E56410 /* JobListViewController.swift in Sources */,
 				CF74577C242BCD2300E56410 /* AppDelegate.swift in Sources */,
 				CF363BDF245552B200D00CAB /* JobWebPageViewController.swift in Sources */,
 				CF5CA1D4243DE26A00117DD4 /* MyXMLParser.swift in Sources */,

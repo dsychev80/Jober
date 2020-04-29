@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Job List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Jober" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="JobListViewController" customModule="Jober" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,7 +105,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tqJ-t9-EDf">
-                                <rect key="frame" x="5" y="93" width="403" height="769"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -115,9 +115,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="tqJ-t9-EDf" firstAttribute="top" secondItem="hJ1-50-8iu" secondAttribute="top" constant="5" id="GqI-l6-I5a"/>
-                            <constraint firstItem="tqJ-t9-EDf" firstAttribute="leading" secondItem="hJ1-50-8iu" secondAttribute="leading" constant="5" id="QW5-Z7-afM"/>
-                            <constraint firstItem="tqJ-t9-EDf" firstAttribute="trailing" secondItem="hJ1-50-8iu" secondAttribute="trailing" constant="-6" id="cym-Jc-6OG"/>
+                            <constraint firstItem="tqJ-t9-EDf" firstAttribute="top" secondItem="hJ1-50-8iu" secondAttribute="top" id="GqI-l6-I5a"/>
+                            <constraint firstItem="tqJ-t9-EDf" firstAttribute="leading" secondItem="hJ1-50-8iu" secondAttribute="leading" id="QW5-Z7-afM"/>
+                            <constraint firstItem="tqJ-t9-EDf" firstAttribute="trailing" secondItem="hJ1-50-8iu" secondAttribute="trailing" id="cym-Jc-6OG"/>
                             <constraint firstItem="tqJ-t9-EDf" firstAttribute="bottom" secondItem="hJ1-50-8iu" secondAttribute="bottom" id="ibM-6L-Duo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hJ1-50-8iu"/>

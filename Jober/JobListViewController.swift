@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  JobListViewController.swift
 //  Jober
 //
 //  Created by Denis Sychev on 25/03/2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class JobListViewController: UIViewController {
 
     let api = APIController()
     @IBOutlet weak var tableView: UITableView!
@@ -17,18 +17,21 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         jobsDataSource = JobsDataSource()
+        showSpinner(onView: self.view)
         api.loadJobs(withCompletion: { [weak self] (items) in
             if let items = items {
                 self!.jobsDataSource!.get(items)
                 self!.tableView.reloadData()
+                self!.removeSpinner()
             }
         })
+        
         tableView.dequeueReusableCell(withIdentifier: "JobCell")
         tableView.dataSource = jobsDataSource
         tableView.delegate = jobsDataSource
         tableView.reloadData()
         
-        view.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
     }
