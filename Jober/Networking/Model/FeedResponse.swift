@@ -9,15 +9,15 @@
 import Foundation
 
 struct Item: Decodable {
-    var title: String = ""
-    var description: String = ""
-    var guid: String = ""
-    var link: String = ""
+    var title: String
+    var description: String
+    var guid: String
+    var link: String
     
-    enum CodingKeys: String, CodingKey {
-        case title
-        case description
-        case guid
-        case link
-    }
+//    enum CodingKeys: String, CodingKey {
+//        case title
+//        case description
+//        case guid
+//        case link
+//    }
 }

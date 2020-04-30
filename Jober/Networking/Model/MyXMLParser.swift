@@ -27,7 +27,7 @@ class MyXMLParser: NSObject, XMLParserDelegate, XMLParsing {
     private let data: Data
     private var string: String = ""
     private var items: [Item] = []
-    private var item: Item = Item()
+    private var item: Item = Item(title: "", description: "", guid: "", link: "")
     
     init(with data: Data) {
         self.data = data
@@ -50,7 +50,7 @@ class MyXMLParser: NSObject, XMLParserDelegate, XMLParsing {
         if let element: XMLFeedNames = XMLFeedNames(rawValue: elementName) {
             switch element {
             case .item:
-                item = Item()
+                item = Item(title: "", description: "", guid: "", link: "")
             default:
                 return
                    }
@@ -59,18 +59,19 @@ class MyXMLParser: NSObject, XMLParserDelegate, XMLParsing {
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         if let element: XMLFeedNames = XMLFeedNames(rawValue: elementName) {
-            switch element {
-            case .item:
-                items.append(item)
-            case .title:
-                item.title = string
-            case .description:
-                item.description = string.removeHTMLTags()
-            case .guid:
-                item.guid = string
-            case .link:
-                item.link = string
+                switch element {
+                case .item:
+                    items.append(item)
+                case .title:
+                    item.title = string
+                case .description:
+                    item.description = string.removeHTMLTags()
+                case .guid:
+                    item.guid = string
+                case .link:
+                    item.link = string
             }
+            
         }
     }
     
