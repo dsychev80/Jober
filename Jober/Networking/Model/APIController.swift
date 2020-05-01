@@ -34,10 +34,11 @@ class APIController {
     
     // TODO: Need to add to this function parameters withParameters with type [string: string]
     func loadJobs(withCompletion completion: @escaping ([Item]?) -> Void) {
-        let parameters = ["v":"true", "q": "ios"]
+        let parameters = ["dr":"QATestDeveloper", "v":"true"]
         let url = StackoverflowJobsFeedAPI.jobsFeedURL.appendingParameters(parameters)
         load(url: url, withCompletion: { (data) in
             if let data = data {
+                print(url)
                 let items = MyXMLParser(with: data)
                 completion(items.returnItems())
             } else {

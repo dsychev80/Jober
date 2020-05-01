@@ -31,7 +31,7 @@ class JobListViewController: UIViewController {
         tableView.delegate = jobsDataSource
         tableView.reloadData()
         
-        view.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
     }

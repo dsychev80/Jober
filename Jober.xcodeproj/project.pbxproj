@@ -22,6 +22,7 @@
 		CF8A99772451BDC900EF5A93 /* JobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8A99752451BDC900EF5A93 /* JobCell.swift */; };
 		CF8FD9A12431C7CF003991B7 /* FeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8FD9A02431C7CF003991B7 /* FeedResponse.swift */; };
 		CF8FD9A32431D1BA003991B7 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8FD9A22431D1BA003991B7 /* APIController.swift */; };
+		CF9A1456245C629C006BC864 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A1455245C629C006BC864 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		CF8A99752451BDC900EF5A93 /* JobCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCell.swift; sourceTree = "<group>"; };
 		CF8FD9A02431C7CF003991B7 /* FeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResponse.swift; sourceTree = "<group>"; };
 		CF8FD9A22431D1BA003991B7 /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		CF9A1455245C629C006BC864 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				CF74577F242BCD2300E56410 /* JobListViewController.swift */,
 				CF363BDC2451D3C000D00CAB /* JobsDataSource.swift */,
 				CF363BDE245552B200D00CAB /* JobWebPageViewController.swift */,
+				CF9A1455245C629C006BC864 /* SearchViewController.swift */,
 				CF745781242BCD2300E56410 /* Main.storyboard */,
 				CF745784242BCD2600E56410 /* Assets.xcassets */,
 				CF745786242BCD2600E56410 /* LaunchScreen.storyboard */,
@@ -204,6 +207,7 @@
 				CF363BDF245552B200D00CAB /* JobWebPageViewController.swift in Sources */,
 				CF5CA1D4243DE26A00117DD4 /* MyXMLParser.swift in Sources */,
 				CF8A99772451BDC900EF5A93 /* JobCell.swift in Sources */,
+				CF9A1456245C629C006BC864 /* SearchViewController.swift in Sources */,
 				CF74577E242BCD2300E56410 /* SceneDelegate.swift in Sources */,
 				CF363BDD2451D3C000D00CAB /* JobsDataSource.swift in Sources */,
 				CF8FD9A12431C7CF003991B7 /* FeedResponse.swift in Sources */,

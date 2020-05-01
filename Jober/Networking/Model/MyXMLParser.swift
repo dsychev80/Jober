@@ -16,10 +16,12 @@ class MyXMLParser: NSObject, XMLParserDelegate, XMLParsing {
     
     enum XMLFeedNames: String {
         case item = "item"
-        case description = "description"
+        case author = "a10:name"
         case title = "title"
         case guid = "guid"
         case link = "link"
+        case pubDate = "pubDate"
+        case location = "location"
     }
     
     typealias XMLTag = XMLFeedNames
@@ -27,7 +29,7 @@ class MyXMLParser: NSObject, XMLParserDelegate, XMLParsing {
     private let data: Data
     private var string: String = ""
     private var items: [Item] = []
-    private var item: Item = Item(title: "", description: "", guid: "", link: "")
+    private var item: Item = Item(title: "", author: "", guid: "", link: "", pubDate: "", location: "")
     
     init(with data: Data) {
         self.data = data
@@ -50,7 +52,7 @@ class MyXMLParser: NSObject, XMLParserDelegate, XMLParsing {
         if let element: XMLFeedNames = XMLFeedNames(rawValue: elementName) {
             switch element {
             case .item:
-                item = Item(title: "", description: "", guid: "", link: "")
+                item = Item(title: "", author: "", guid: "", link: "", pubDate: "", location: "")
             default:
                 return
                    }
@@ -64,12 +66,16 @@ class MyXMLParser: NSObject, XMLParserDelegate, XMLParsing {
                     items.append(item)
                 case .title:
                     item.title = string
-                case .description:
-                    item.description = string.removeHTMLTags()
+                case .author:
+                    item.author = string
                 case .guid:
                     item.guid = string
                 case .link:
                     item.link = string
+                case .pubDate:
+                    item.pubDate = string
+                case .location:
+                    item.location = string
             }
             
         }

@@ -12,8 +12,10 @@ import UIKit
 struct JobViewModel {
     struct CellData: JobCellViewModel {
         var title: String
-        var description: String
+        var author: String
         var link: String
+        var pubDate: String
+        var location: String
     }
 }
 
@@ -33,15 +35,14 @@ extension JobsDataSource: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let job = jobs[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: JobCell.self), for: indexPath) as! JobCell
-        cell.set(viewModel: JobViewModel.CellData(title: job.title, description: job.description, link: job.link))
+        cell.set(viewModel: JobViewModel.CellData(title: job.title, author: job.author, link: job.link, pubDate: job.pubDate, location: job.location))
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return jobs.count
     }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        return 150
     }
 }
