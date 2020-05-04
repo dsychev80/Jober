@@ -9,7 +9,7 @@
 import Foundation
  	
 // FIXME: Think about class name, it may need to change (NetworkController)
-class APIController {
+class NetworkService {
     struct StackoverflowJobsFeedAPI {
         static let jobsFeedURL = URL(string: "https://stackoverflow.com/jobs/feed")!
     }

@@ -12,7 +12,7 @@ protocol XMLParsing {
     func returnItems() -> [Item]
 }
 
-class MyXMLParser: NSObject, XMLParserDelegate, XMLParsing {
+class JoberXMLParser: NSObject, XMLParserDelegate, XMLParsing {
     
     enum XMLFeedNames: String {
         case item = "item"
