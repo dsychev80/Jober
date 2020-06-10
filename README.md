@@ -6,9 +6,9 @@ This application is intended to do next things:
 Application creates request to StackOverflow RSS feed API with 
 In this application I didn't use any third party libraryies  
 
-<img src="images/screenshootMainView.png">
-<img src="images/screenshootParametersView.png">
-<img src="images/screenshootWebPage.png">
+<img src="images/screenshootMainView.png" align="left" width="120">
+<img src="images/screenshootParametersView.png" align="left" width="120">
+<img src="images/screenshootWebPage.png" align="left" width="120">
 
 
 ##License
