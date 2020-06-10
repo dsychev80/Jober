@@ -14,7 +14,7 @@ protocol XMLParsing {
 
 class JoberXMLParser: NSObject, XMLParserDelegate, XMLParsing {
     
-    enum XMLFeedNames: String {
+    private enum XMLFeedNames: String {
         case item = "item"
         case author = "a10:name"
         case title = "title"
@@ -24,7 +24,7 @@ class JoberXMLParser: NSObject, XMLParserDelegate, XMLParsing {
         case location = "location"
     }
     
-    typealias XMLTag = XMLFeedNames
+    private typealias XMLTag = XMLFeedNames
     
     private let data: Data
     private var string: String = ""

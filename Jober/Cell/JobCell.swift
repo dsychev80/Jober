@@ -8,6 +8,7 @@
 
 import UIKit
 
+// this DateFormat used in daysAgoFromPublication function
 struct DateFormat {
     static let format = "EEE, dd MMM yyyy HH:mm:ss z"
 }
@@ -39,7 +40,7 @@ class JobCell: UITableViewCell {
         titleLabel.layer.cornerRadius = 5
         titleLabel.clipsToBounds = true
         
-        backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
         selectionStyle = .none
     }
     
@@ -47,7 +48,7 @@ class JobCell: UITableViewCell {
         titleLabel.text = viewModel.title
         authorLabel.text = viewModel.author
         publicationLabel.text = viewModel.pubDate.daysAgoFromPublication()
-        locationLabel.text = viewModel.location
+        locationLabel.text = viewModel.location.isEmpty ? "No office location" : viewModel.location
     }
 }
 

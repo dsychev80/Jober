@@ -13,7 +13,7 @@ var vSpinner: UIView?
 extension UIViewController {
     func showSpinner(onView: UIView) {
         let spinnerView = UIView.init(frame: onView.bounds)
-        spinnerView.backgroundColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
+        spinnerView.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
         let activityIndicator = UIActivityIndicatorView.init(style: .medium)
         activityIndicator.startAnimating()
         activityIndicator.center = spinnerView.center

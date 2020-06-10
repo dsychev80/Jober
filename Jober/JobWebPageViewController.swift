@@ -16,9 +16,10 @@ class JobWebPageViewController: UIViewController, WKNavigationDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(link)
         guard let url = URL(string: link) else { return }
         let request = URLRequest(url: url)
         webView.load(request)
     }
+    
+    
 }

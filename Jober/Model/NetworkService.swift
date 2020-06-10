@@ -1,5 +1,5 @@
 //
-//  APIController.swift
+//  NetworkService.swift
 //  Jober
 //
 //  Created by Denis Sychev on 30/03/2020.
@@ -8,10 +8,28 @@
 
 import Foundation
  	
-// FIXME: Think about class name, it may need to change (NetworkController)
 class NetworkService {
-    struct StackoverflowJobsFeedAPI {
+    
+    private struct StackoverflowJobsFeedAPI {
         static let jobsFeedURL = URL(string: "https://stackoverflow.com/jobs/feed")!
+    }
+    
+    private var queryItems: [URLQueryItem] = []
+    
+    func addParameter(withValue value: String, forKey key: String) {
+        let queryItem = URLQueryItem(name: key, value: value)
+        if !queryItems.contains(queryItem) {
+            queryItems.append(URLQueryItem(name: key, value: value))
+        }
+    }
+    
+    func removeParameter(withValue value: String, forKey key: String) {
+        let queryItem = URLQueryItem(name: key, value: value)
+        if queryItems.contains(queryItem) {
+            if let index = queryItems.firstIndex(of: queryItem) {
+                queryItems.remove(at: index)
+            }
+        }
     }
     
     func load(url: URL, withCompletion completion: @escaping (Data?) -> Void) {
@@ -31,31 +49,25 @@ class NetworkService {
         task.resume()
     }
     
-    
-    // TODO: Need to add to this function parameters withParameters with type [string: string]
     func loadJobs(withCompletion completion: @escaping ([Item]?) -> Void) {
-        let parameters = ["dr":"QATestDeveloper", "v":"true"]
-        let url = StackoverflowJobsFeedAPI.jobsFeedURL.appendingParameters(parameters)
+        let url = StackoverflowJobsFeedAPI.jobsFeedURL.appendingParameters(queryItems)
         load(url: url, withCompletion: { (data) in
             if let data = data {
                 print(url)
-                let items = MyXMLParser(with: data)
+                let items = JoberXMLParser(with: data)
                 completion(items.returnItems())
             } else {
                 print("no data")
             }
         })
     }
+    
 }
 
 extension URL {
-    func appendingParameters(_ parameters: [String: String]) -> URL {
+    func appendingParameters(_ parameters: [URLQueryItem]) -> URL {
         var urlComponents = URLComponents(url: self, resolvingAgainstBaseURL: false)!
-        var queryItems = urlComponents.queryItems ?? []
-        for (key, value) in parameters {
-            queryItems.append(URLQueryItem(name: key, value: value))
-        }
-        urlComponents.queryItems = queryItems
+        urlComponents.queryItems = parameters
         return urlComponents.url!
     }
 }
