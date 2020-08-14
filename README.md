@@ -14,6 +14,7 @@ In this application I didn't use any third party libraryies
 <br style="clear:both" />
 ***
 
+------
 ##License
 ---
 This project, including its components and excluding works credited, is released under the Unlicense.
