@@ -13,7 +13,7 @@ In this application I didn't use any third party libraryies
 <img src="images/screenshootParametersView.png" align="left" width="120">
 <img src="images/screenshootWebPage.png" align="left" width="120">
 
-<br/>
+![alt text](images/screenshootMainView.png "Title")
 
 ##License
 ---
