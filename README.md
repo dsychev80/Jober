@@ -13,6 +13,11 @@ In this application I didn't use any third party libraryies
 ![alt text]!(images/screenshootParametersView.png "Title"){:width=120}
 ![alt text](images/screenshootWebPage.png "Title"){:width=120}
 
+<img src="images/screenshootMainView.png" align="left" width="120">
+<img src="images/screenshootParametersView.png" align="left" width="120">
+<img src="images/screenshootWebPage.png" align="left" width="120">
+
+***
 
 ##License
 ---
