@@ -11,10 +11,10 @@ In this application I didn't use any third party libraryies
 <img src="images/screenshootMainView.png" align="left" width="120">
 <img src="images/screenshootParametersView.png" align="left" width="120">
 <img src="images/screenshootWebPage.png" align="left" width="120">
-<br style="clear:both" />
-***
 
-------
-##License
+
+
+
+##  License
 ---
 This project, including its components and excluding works credited, is released under the Unlicense.
