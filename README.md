@@ -14,6 +14,9 @@ In this application I didn't use any third party libraryies
 <img src="images/screenshootWebPage.png" align="left" width="120">
 
 ![alt text](images/screenshootMainView.png "Title")
+![alt text]![width 120](images/screenshootParametersView.png "Title")
+![alt text](images/screenshootWebPage.png "Title")
+
 
 ##License
 ---
