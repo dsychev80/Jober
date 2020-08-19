@@ -11,6 +11,7 @@
 		CF363BDD2451D3C000D00CAB /* JobsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF363BDC2451D3C000D00CAB /* JobsDataSource.swift */; };
 		CF363BDF245552B200D00CAB /* JobWebPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF363BDE245552B200D00CAB /* JobWebPageViewController.swift */; };
 		CF363BE32458BB8C00D00CAB /* UIViewController+LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF363BE22458BB8C00D00CAB /* UIViewController+LoadingIndicator.swift */; };
+		CF40E0A32493692600D09E9C /* TechSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF40E0A22493692600D09E9C /* TechSectionHeaderView.swift */; };
 		CF5CA1D4243DE26A00117DD4 /* JoberXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5CA1D3243DE26A00117DD4 /* JoberXMLParser.swift */; };
 		CF5D7C312465434B0048E342 /* Parameters.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF5D7C302465434B0048E342 /* Parameters.plist */; };
 		CF5D7C352467DC0F0048E342 /* SearchTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5D7C342467DC0F0048E342 /* SearchTableDataSource.swift */; };
@@ -21,6 +22,7 @@
 		CF745783242BCD2300E56410 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF745781242BCD2300E56410 /* Main.storyboard */; };
 		CF745785242BCD2600E56410 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF745784242BCD2600E56410 /* Assets.xcassets */; };
 		CF745788242BCD2600E56410 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF745786242BCD2600E56410 /* LaunchScreen.storyboard */; };
+		CF7C067824A35A2F00CE3F96 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7C067724A35A2F00CE3F96 /* TableViewCell.swift */; };
 		CF899A36247C115B00936870 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF899A35247C115B00936870 /* WebKit.framework */; };
 		CF8A997324518D8E00EF5A93 /* String+withoutHTMLTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8A997224518D8E00EF5A93 /* String+withoutHTMLTags.swift */; };
 		CF8A99772451BDC900EF5A93 /* JobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8A99752451BDC900EF5A93 /* JobCell.swift */; };
@@ -38,6 +40,7 @@
 		CF40E09B2490C2C300D09E9C /* screenshootMainView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshootMainView.png; sourceTree = "<group>"; };
 		CF40E09C2490C2C300D09E9C /* screenshootParametersView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshootParametersView.png; sourceTree = "<group>"; };
 		CF40E09D2490C2C400D09E9C /* screenshootWebPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshootWebPage.png; sourceTree = "<group>"; };
+		CF40E0A22493692600D09E9C /* TechSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechSectionHeaderView.swift; sourceTree = "<group>"; };
 		CF5CA1D3243DE26A00117DD4 /* JoberXMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoberXMLParser.swift; sourceTree = "<group>"; };
 		CF5D7C302465434B0048E342 /* Parameters.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Parameters.plist; sourceTree = "<group>"; };
 		CF5D7C342467DC0F0048E342 /* SearchTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableDataSource.swift; sourceTree = "<group>"; };
@@ -50,6 +53,7 @@
 		CF745784242BCD2600E56410 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF745787242BCD2600E56410 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF745789242BCD2600E56410 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF7C067724A35A2F00CE3F96 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		CF899A35247C115B00936870 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		CF899A37247E4BA100936870 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CF8A997224518D8E00EF5A93 /* String+withoutHTMLTags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+withoutHTMLTags.swift"; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 			children = (
 				CF9A1455245C629C006BC864 /* SearchViewController.swift */,
 				CF5D7C342467DC0F0048E342 /* SearchTableDataSource.swift */,
+				CF40E0A22493692600D09E9C /* TechSectionHeaderView.swift */,
+				CF7C067724A35A2F00CE3F96 /* TableViewCell.swift */,
 			);
 			path = SearchView;
 			sourceTree = "<group>";
@@ -160,8 +166,8 @@
 		CF8FD99D2430EEED003991B7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CF9A1457245DE20D006BC864 /* StorageController.swift */,
 				CF8FD9A02431C7CF003991B7 /* FeedResponse.swift */,
+				CF9A1457245DE20D006BC864 /* StorageController.swift */,
 				CF8FD9A22431D1BA003991B7 /* NetworkService.swift */,
 				CF5CA1D3243DE26A00117DD4 /* JoberXMLParser.swift */,
 				CF6F3F302479B7C7000291D2 /* NetworkAndStorageMediator.swift */,
@@ -244,6 +250,7 @@
 				CF363BE32458BB8C00D00CAB /* UIViewController+LoadingIndicator.swift in Sources */,
 				CF6F3F312479B7C7000291D2 /* NetworkAndStorageMediator.swift in Sources */,
 				CF745780242BCD2300E56410 /* JobListViewController.swift in Sources */,
+				CF7C067824A35A2F00CE3F96 /* TableViewCell.swift in Sources */,
 				CF9A1458245DE20D006BC864 /* StorageController.swift in Sources */,
 				CF5D7C352467DC0F0048E342 /* SearchTableDataSource.swift in Sources */,
 				CF74577C242BCD2300E56410 /* AppDelegate.swift in Sources */,
@@ -256,6 +263,7 @@
 				CF363BDD2451D3C000D00CAB /* JobsDataSource.swift in Sources */,
 				CF8FD9A12431C7CF003991B7 /* FeedResponse.swift in Sources */,
 				CF8FD9A32431D1BA003991B7 /* NetworkService.swift in Sources */,
+				CF40E0A32493692600D09E9C /* TechSectionHeaderView.swift in Sources */,
 				CF8A997324518D8E00EF5A93 /* String+withoutHTMLTags.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,7 +340,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -386,7 +394,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
