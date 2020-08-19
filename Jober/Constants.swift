@@ -8,6 +8,16 @@
 
 import Foundation
 
-struct Constants {
-
+enum Constants: String {
+    // MARK: - NetworkService constants
+    case StackOverflowJobsFeedURL = "https://stackoverflow.com/jobs/feed"
+    
+    // MARK: - JobListViewController
+    // Segues
+    case showJobWebPage = "showJobWebPage"
+    case showSearchView = "showSearchView"
+    // Cell identifier
+    case jobCellIdentifier = "JobCell"
+    
+    // MARK: - JobCell
 }

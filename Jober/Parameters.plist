@@ -4,7 +4,7 @@
 <array>
 	<dict>
 		<key>name</key>
-		<string></string>
+		<string>Location options</string>
 		<key>key</key>
 		<string>v</string>
 		<key>values</key>
@@ -19,7 +19,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string></string>
+		<string>Others Compensation</string>
 		<key>key</key>
 		<string>e</string>
 		<key>values</key>
@@ -34,7 +34,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string></string>
+		<string>Minimum annual salary</string>
 		<key>key</key>
 		<string>s</string>
 		<key>values</key>
@@ -49,7 +49,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string></string>
+		<string>Tech you dislike (Add up to 10 tech tags)</string>
 		<key>key</key>
 		<string>dl</string>
 		<key>values</key>
@@ -64,7 +64,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string></string>
+		<string>Tech you like (Add up to 10 tech tags)</string>
 		<key>key</key>
 		<string>tl</string>
 		<key>values</key>
@@ -79,7 +79,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string></string>
+		<string>Remote</string>
 		<key>key</key>
 		<string>r</string>
 		<key>values</key>
@@ -94,7 +94,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string></string>
+		<string>Units</string>
 		<key>key</key>
 		<string>u</string>
 		<key>values</key>
@@ -109,7 +109,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string></string>
+		<string>Distance</string>
 		<key>key</key>
 		<string>d</string>
 		<key>values</key>
@@ -148,7 +148,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string></string>
+		<string>Location</string>
 		<key>key</key>
 		<string>l</string>
 		<key>values</key>
@@ -163,7 +163,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string></string>
+		<string>Experience Level</string>
 		<key>key</key>
 		<string>ms</string>
 		<key>values</key>
@@ -208,7 +208,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string></string>
+		<string>Role</string>
 		<key>key</key>
 		<string>dr</string>
 		<key>values</key>
@@ -301,7 +301,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string></string>
+		<string>Job type</string>
 		<key>key</key>
 		<string>j</string>
 		<key>values</key>
@@ -328,7 +328,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string></string>
+		<string>Benefits</string>
 		<key>key</key>
 		<string>b</string>
 		<key>values</key>
@@ -361,7 +361,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string></string>
+		<string>Salary in</string>
 		<key>key</key>
 		<string>c</string>
 		<key>values</key>
@@ -442,7 +442,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string></string>
+		<string>Location options</string>
 		<key>key</key>
 		<string>t</string>
 		<key>values</key>

@@ -20,7 +20,10 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableViewSetup()
+    }
+    
+    func tableViewSetup() {
         guard let networkService = networkService else { return }
         self.networkService = networkService
         

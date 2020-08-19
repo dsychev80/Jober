@@ -45,7 +45,9 @@ enum StorageError: Error {
     case cantSaveToFile
 }
 
-//
+// TODO: - Need to create protocol StorageController with functions: fetch(), save()
+
+// FIXME: - Change name to PlistStorageController
 struct StorageController {
     
     public func fetchParameters() -> [Parameter]? {
@@ -54,8 +56,7 @@ struct StorageController {
         var plistData: Data = Data()
         do{
             plistData = try Data(contentsOf: storedURL)
-        } catch (let error) {
-            print(error)
+        } catch {
             print(StorageError.noDataInFile.localizedDescription)
         }
         if plistData.isEmpty {
@@ -91,7 +92,6 @@ extension URL {
         let fileManager = FileManager()
         guard let document = try? fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) else { return nil }
         url = document.appendingPathComponent(StoragePath.storedParemeters.rawValue).appendingPathExtension(StoragePath.fileExtension.rawValue)
-        print(url)
         switch name {
         case .defaultParameters:
             return Bundle.main.url(forResource: StoragePath.defaultParameters.rawValue, withExtension: StoragePath.fileExtension.rawValue)

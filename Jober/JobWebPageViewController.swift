@@ -20,6 +20,4 @@ class JobWebPageViewController: UIViewController, WKNavigationDelegate {
         let request = URLRequest(url: url)
         webView.load(request)
     }
-    
-    
 }

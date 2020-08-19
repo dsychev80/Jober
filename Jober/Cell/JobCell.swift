@@ -23,7 +23,7 @@ protocol JobCellViewModel {
 
 class JobCell: UITableViewCell {
     
-    static let reuseID = "JobCell"
+    static let reuseID = Constants.jobCellIdentifier
 
     @IBOutlet private weak var cardView: UIView!
     @IBOutlet private weak var titleLabel: UILabel!
@@ -33,7 +33,17 @@ class JobCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        cellSetup()
+    }
+    
+    func set(viewModel: JobCellViewModel) {
+        titleLabel.text = viewModel.title
+        authorLabel.text = viewModel.author
+        publicationLabel.text = viewModel.pubDate.daysAgoFromPublication()
+        locationLabel.text = viewModel.location.isEmpty ? "No office location" : viewModel.location
+    }
+    
+    private func cellSetup() {
         cardView.layer.cornerRadius = 10
         cardView.clipsToBounds = true
         
@@ -42,13 +52,6 @@ class JobCell: UITableViewCell {
         
         backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
         selectionStyle = .none
-    }
-    
-    func set(viewModel: JobCellViewModel) {
-        titleLabel.text = viewModel.title
-        authorLabel.text = viewModel.author
-        publicationLabel.text = viewModel.pubDate.daysAgoFromPublication()
-        locationLabel.text = viewModel.location.isEmpty ? "No office location" : viewModel.location
     }
 }
 

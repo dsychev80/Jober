@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Job List View Controller-->
+        <!--Jober-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="JobListViewController" customModule="Jober" customModuleProvider="target" sceneMemberID="viewController">
@@ -129,7 +129,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="8gC-B7-Kuo">
+                    <navigationItem key="navigationItem" title="Jober" id="8gC-B7-Kuo">
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="gam-Vi-txn">
                             <connections>
                                 <segue destination="7QG-Ka-uTg" kind="show" identifier="showSearchView" id="xHD-fs-2B2"/>

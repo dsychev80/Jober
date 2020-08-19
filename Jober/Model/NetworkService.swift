@@ -11,7 +11,7 @@ import Foundation
 class NetworkService {
     
     private struct StackoverflowJobsFeedAPI {
-        static let jobsFeedURL = URL(string: "https://stackoverflow.com/jobs/feed")!
+        static let jobsFeedURL = URL(string: Constants.StackOverflowJobsFeedURL.rawValue)!
     }
     
     private var queryItems: [URLQueryItem] = []
@@ -44,7 +44,6 @@ class NetworkService {
             } else {
                 completion(data)
             }
-            
         })
         task.resume()
     }
@@ -53,7 +52,6 @@ class NetworkService {
         let url = StackoverflowJobsFeedAPI.jobsFeedURL.appendingParameters(queryItems)
         load(url: url, withCompletion: { (data) in
             if let data = data {
-                print(url)
                 let items = JoberXMLParser(with: data)
                 completion(items.returnItems())
             } else {
@@ -61,7 +59,6 @@ class NetworkService {
             }
         })
     }
-    
 }
 
 extension URL {

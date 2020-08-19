@@ -35,15 +35,13 @@ class JoberXMLParser: NSObject, XMLParserDelegate, XMLParsing {
         self.data = data
         super.init()
     }
-    
-    
+        
     func returnItems() -> [Item] {
         let parser = XMLParser(data: self.data)
         parser.delegate = self
         parser.parse()
         return items
     }
-    
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
 
@@ -77,12 +75,10 @@ class JoberXMLParser: NSObject, XMLParserDelegate, XMLParsing {
                 case .location:
                     item.location = string
             }
-            
         }
     }
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         self.string += string
     }
-    
 }

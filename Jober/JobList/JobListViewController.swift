@@ -12,21 +12,28 @@ class JobListViewController: UIViewController {
 
     let networkService = NetworkService()
     @IBOutlet weak var tableView: UITableView!
-    var jobsDataSource: JobsDataSource?
+    var jobsDataSource: JobsDataSource = JobsDataSource()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        jobsDataSource = JobsDataSource()
-        showSpinner(onView: self.tableView)
-        networkService.loadJobs(withCompletion: { [weak self] (items) in
-            if let items = items {
-                self!.jobsDataSource!.get(items)
-                self!.tableView.reloadData()
-                self!.removeSpinner()
+        tableViewSetup()
+        loadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constants.showJobWebPage.rawValue {
+            if let indexPath = self.tableView.indexPathForSelectedRow, let jobWebPageViewController = segue.destination as? JobWebPageViewController {
+                jobWebPageViewController.link = self.jobsDataSource.getLinkFromJobAt(indexPath.row)
             }
-        })
-        
-        tableView.dequeueReusableCell(withIdentifier: "JobCell")
+        } else if segue.identifier == Constants.showSearchView.rawValue {
+            if let searchViewController = segue.destination as? SearchViewController {
+                searchViewController.networkService = self.networkService
+            }
+        }
+    }
+    
+    private func tableViewSetup() {
+        tableView.dequeueReusableCell(withIdentifier: Constants.jobCellIdentifier.rawValue)
         tableView.dataSource = jobsDataSource
         tableView.delegate = jobsDataSource
         tableView.reloadData()
@@ -36,16 +43,15 @@ class JobListViewController: UIViewController {
         tableView.separatorStyle = .none
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showJobWebPage" {
-            if let indexPath = self.tableView.indexPathForSelectedRow, let jobWebPageViewController = segue.destination as? JobWebPageViewController {
-                jobWebPageViewController.link = self.jobsDataSource?.getLinkFromJobAt(indexPath.row) ?? ""
+    private func loadData() {
+        showSpinner(onView: self.view)
+        networkService.loadJobs(withCompletion: { [weak self] (items) in
+            if let items = items {
+                self!.jobsDataSource.get(items)
+                self!.tableView.reloadData()
+                self!.removeSpinner()
             }
-        } else if segue.identifier == "showSearchView" {
-            if let searchViewController = segue.destination as? SearchViewController {
-                searchViewController.networkService = self.networkService
-            }
-        }
+        })
     }
     
 }
