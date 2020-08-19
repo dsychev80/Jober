@@ -8,11 +8,14 @@ Application creates request to StackOverflow RSS feed API and receives data in X
 In this application I didn't use any third party libraries  
 
 
-<img src="images/screenshootMainView.png" align="left" width="120">
-<img src="images/screenshootParametersView.png" align="left" width="120">
-<img src="images/screenshootWebPage.png" align="left" width="120">
 
-<div align="center"></div>
+
+<div style="display: inline-block;">
+  <div style="display: inline-block;">
+  <img src="images/screenshootMainView.png" width="120">
+  <img src="images/screenshootParametersView.png" width="120">
+  <img src="images/screenshootWebPage.png" width="120">
+</div><br/>
 
 
 ##  License
